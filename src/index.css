@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+/* Global Settings */
+body {
+	font-family: "Alata", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+	font-family: "Josefin Sans", sans-serif;
+}
+
+h3 {
+	font-weight: 600;
+}
+/* End of Global Settings */
+
+/* Desktop Width */
+.w-desktop-1440px {
+	width: 100%;
+	max-width: 1440px;
+
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+}
+/* End of Desktop Width */
+
+/* Container */
+.container-1110px {
+	width: 100%;
+	max-width: 1110px;
+}
+
+.container-970px {
+	width: 100%;
+	max-width: 970px;
+}
+/* End of Container */
+
+/* Header */
+header {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("/images/desktop/image-hero.jpg") no-repeat center/cover;
+}
+
+header button::before {
+	content: none;
+}
+/* End of Header */
+
+/* Links Hover & Active Animations */
+.nav-link::before {
+	content: "";
+
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+
+	width: 100%;
+	height: 2px;
+
+	background-color: #fff;
+
+	transition: transform 0.3s;
+
+	transform: scaleX(0);
+	transform-origin: left;
+}
+
+.nav-link:hover::before,
+.nav-link:active::before {
+	transform: scaleX(1);
+}
+/* End of Links Hover & Active Animations */
+
+/* Section Leader */
+.content-box {
+	width: 100%;
+	max-width: 541px;
+
+	padding-left: calc(541px - 441px);
+	padding-top: calc(317px - 220px);
+}
+/* End of Section Leader */
+
+/* Button See All Animation */
+button::before {
+	content: "";
+
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transform: translateX(-100%);
+
+	transition: transform 0.3s;
+
+	background-color: #171717;
+}
+
+button:hover,
+button:active {
+	color: #fff;
+}
+
+button:hover::before,
+button:active::before {
+	transform: translateX(0);
+}
+/* End of Button See All Animation */
+
+/* Gallery Card */
+.gallery-card {
+	position: relative;
+
+	height: 450px;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.gallery-card::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.6);
+}
+/* End of Gallery Card */
+
+/* Media Query */
+
+/* Header */
+@media (max-width: 1070px) {
+	.header-h1-media-1070px {
+		margin-inline: auto;
+	}
+}
+
+@media (max-width: 680px) {
+	.header-h1-media-680px {
+		font-size: 40px;
+		max-width: 500px;
+		padding: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	.header-h1-media-400px {
+		font-size: 35px;
+		max-width: 400px;
+		padding: 15px;
+	}
+}
+
+/* Navigation Toggle Buttons Hamburger & Close */
+@media (max-width: 710px) {
+	.toggle-nav-buttons {
+		display: block;
+	}
+}
+/* End of Navigation Toggle Buttons Hamburger & Close */
+
+/* End of Header */
+
+/* Main */
+/* Section Leader */
+@media (max-width: 1070px) {
+	.section-leader-media-1070px {
+		@apply flex flex-col items-center justify-center;
+	}
+
+	.section-leader-media-1070px div:last-child {
+		position: static;
+		padding-left: 50px;
+		padding-right: 50px;
+		text-align: center;
+	}
+}
+
+@media (max-width: 710px) {
+	.nav-links-header-media-710px {
+		display: none;
+	}
+}
+
+@media (max-width: 610px) {
+	.section-leader-media-610px h2 {
+		font-size: 28px;
+		margin-bottom: 0;
+	}
+}
+
+@media (max-width: 450px) {
+	.section-leader-media-610px div:last-child {
+		padding-top: 50px;
+		padding-inline: 0;
+	}
+}
+/* End of Section Leader */
+
+/* Section Gallery */
+@media (max-width: 1000px) {
+	.gallery-cards-media-1000px {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.gallery-card-media-1000px,
+	.gallery-wrapper-media-1000px {
+		width: 100%;
+		max-width: 800px;
+		height: 120px;
+	}
+
+	.gallery-section-media-1000px {
+		@apply flex flex-col items-center;
+	}
+}
+
+@media (max-width: 610px) {
+	.section-gallery-media-610px {
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
+		margin-bottom: 40px;
+	}
+
+	.section-gallery-media-610px h2 {
+		font-size: 28px;
+		height: unset;
+	}
+}
+/* End of Section Gallery */
+/* End of Main */
+
+/* Footer */
+
+@media (max-width: 710px) {
+	.footer-media-710px {
+		@apply flex flex-col justify-center items-center gap-6;
+	}
+
+	.nav-order-1-media-710px {
+		@media (max-width: 710px) {
+			order: 3;
+		}
+	}
+
+	.nav-order-2-media-710px {
+		@media (max-width: 710px) {
+			order: 2;
+			justify-content: center;
+		}
+	}
+
+	.nav-order-3-media-710px {
+		@media (max-width: 710px) {
+			order: 4;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.nav-links-media-500px {
+		@apply flex flex-col items-center gap-2.5;
+	}
+}
+/* End of Footer */
+
+/* End of Media Query */
