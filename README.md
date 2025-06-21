@@ -33,7 +33,7 @@ This is a solution to the [Loopstudios landing page challenge on Frontend Mentor
 ### Links
 
 -   Solution URL: [Github](https://github.com/Jojo25011990/Loopstudios-landing-page)
--   Live Site URL: [Github Pages](https://jojo25011990.github.io/loopstudio-react-landing-page/)
+-   Live Site URL: [Github Pages](https://jojo25011990.github.io/Loopstudios-landing-page/)
 
 ## My process
 
