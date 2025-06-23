@@ -15,7 +15,7 @@ const NavToggleButtons = ({ isActive, toggleButton }) => {
 
 			<button
 				className={`absolute top-0 cursor-pointer ${
-					isActive ? "active" : "hidden"
+					isActive ? "block" : "hidden"
 				}`}
 				onClick={toggleButton}
 			>
