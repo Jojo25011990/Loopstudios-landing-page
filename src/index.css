@@ -158,6 +158,10 @@ button:active::before {
 		max-width: 400px;
 		padding: 15px;
 	}
+
+	body {
+		@apply p-0;
+	}
 }
 
 /* Navigation Toggle Buttons Hamburger & Close */
